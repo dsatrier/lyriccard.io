@@ -1,0 +1,215 @@
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+html,body{margin:0;padding:0;}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    overflow-y:hidden;
+    height: 100vh;
+    
+}
+
+.title{
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    width: 350px;
+
+}
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: pink;
+    border-radius: 15px;
+   padding: 25px;
+   height: auto;
+    width: 500px;
+    transition: border-radius 0.3s; 
+
+}
+
+.card.rounded {
+    border-radius: 15px;
+}
+
+.card.square {
+    border-radius: 0;
+}
+
+.cardColor{
+    margin-top:20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    font-size: 20px;
+}
+
+.topHalf {
+    display: flex;
+    
+}
+
+.lyricCont {
+  
+    padding: 10px;
+    margin-left: 10px; /* Added margin to separate imageCont and lyricCont */
+    border-radius: 10px;
+}
+
+.lyricTitle{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    width: 350px;
+}
+
+.lyricSinger{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+    width: 350px;
+}
+
+.imageCont {
+    width: 80px;
+    margin: auto;
+}
+
+#imagePlaceholder {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+    
+}
+
+[contenteditable] {
+    outline: 0px solid transparent;
+  }
+
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* Align items to the start (left) */
+    width: 500px;
+    margin-left:25px;
+    margin-bottom: 10px;
+}
+
+#spotify {
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+
+
+.lyrics {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bottomHalf{
+    margin-left: 20px;
+}
+.lyrics{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    height: auto;
+    width: 500px;
+}
+
+.slider-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider-text {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+ 

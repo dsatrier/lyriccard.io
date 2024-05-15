@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <tag autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+        <div class = "container" id="cont"><!--viewport container-->
+            <div class="title" id ="title"> if you need lyrics, i gotchu baby</div>
+
+            <div class="card" id = "card" onclick="toggleBorder()">
+                <div class="topHalf"> <!--contains two divs, side by side-->
+                    <div class="imageCont">
+                        <input type="file" id="fileInput" style="display: none;">
+                        <img src="placeholder.png" id="imagePlaceholder" onclick="openFileInput()" alt="Image Placeholder">
+                    </div>
+                    <div class = 'lyricCont'> <!--elements should be stacked-->
+                        <div class="lyricTitle" contenteditable="true">click here to add title</div>
+                        <div class="lyricSinger"  contenteditable="true">click to add artist </div>
+                    </div>
+                </div>
+                <div class="bottomHalf">
+                    <div class="lyrics" contenteditable="true">now just copy paste text!</div>
+                </div>
+                <div class="logo">
+                <img src="spotify.png" id="spotify" alt="Image Placeholder">
+                </div>
+            </div>
+
+            <div class="cardColor" id="cardColor">
+                <label for="color-picker" style="margin-right:10px">Background Color:</label>
+                <input type="color" value="#ff0000" id="color-picker" style="height: 30px; width: 30px;margin-right: 10px;">
+                <label for="color-picker2" style="margin-right:10px">Font Color:</label>
+                <input type="color" value="#ff0000" id="color-picker2" style="height: 30px; width: 30px;margin-right: 10px;">
+                <label for="color-picker3" style="margin-right:10px">Screen Color:</label>
+                <input type="color" value="#ff0000" id="color-picker3" style="height: 30px; width: 30px;">
+
+            </div>
+
+            <div class="slider-container" id = 'slide'>
+                <label class="switch">
+                  <input type="checkbox" id="toggleElements">
+                  <span class="slider round"></span>
+                </label>
+                <div class="slider-text">when you're sure you're done, use this so u can take a screenshot of just the card</div>
+              </div>
+              
+            
+        </div>  
+  
+       
+        
+        <script src="index.js" async defer></script>
+    </body>
+</html>
