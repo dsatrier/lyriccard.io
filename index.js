@@ -70,22 +70,33 @@ function updateFooterColor(color) {
 const toggleElements = document.getElementById('toggleElements');
 const elementsToToggle = ['.title', '.cardColor', '.slider-container', '.footer'];
 
-toggleElements.addEventListener('change', function() {
+function toggleVisibility() {
     elementsToToggle.forEach(selector => {
         const elements = document.querySelectorAll(selector);
         elements.forEach(element => {
           if (selector === '.footer') {
+            if(element.textContent !== ''){
             element.textContent = ''; 
+            }else{
+              element.textContent = "instant crush'24 | side project 1";
+            }
           } else {
-            if (element.style.display === "none") {
+            if (element.style.display === "none" && selector === '.cardColor') {
+              element.style.display = "flex";
+            } else if(element.style.display === "none"){
               element.style.display = "block";
-            } else {
-              element.style.display = "none";
+            }else{
+              element.style.display = "none"
             }
           }
         });
     });
-});
+}
+
+toggleElements.addEventListener('change', toggleVisibility);
+
+toggleElements.addEventListener('click', toggleVisibility);
+
 
 
 window.addEventListener('load', function() {

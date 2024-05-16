@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body id="toggleElements">
         <tag autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
         <div class = "container" id="cont"><!--viewport container-->
             <div class="title" id="title">spotify lyric card maker &lt;3</div>
@@ -40,7 +40,7 @@
                 </div> -->
             </div>
 
-            <div class="cardColor" id="cardColor">
+            <div class="cardColor" id="cardColor" style="display: flex;">
                 <label for="color-picker" style="margin-right:10px">Background Color:</label>
                 <input type="color" value="#ffffff" id="color-picker" style="height: 30px; width: 30px;margin-right: 10px;">
                 <label for="color-picker2" style="margin-right:10px">Font Color:</label>
@@ -50,12 +50,8 @@
 
             </div>
 
-            <div class="slider-container" id = 'slide'>
-                <label class="switch">
-                  <input type="checkbox" id="toggleElements">
-                  <span class="slider round"></span>
-                </label>
-                <div class="slider-text">when you're sure you're done, use this so u can take a screenshot of just the card</div>
+            <div class="slider-container" >
+                <div class="slider-text">click anywhere on the screen to hide everything but the card, reclick to show options :)</div>
               </div>
               
             
