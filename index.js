@@ -41,10 +41,14 @@ window.addEventListener("load", function() {
     colorPicker3.select();
 }, false);
 
+
 function updateBackgroundColor(event) {
-    const card = document.querySelector(".card");
-    card.style.backgroundColor = event.target.value;
+  const card = document.querySelector(".card");
+
+  card.style.backgroundColor = event.target.value;
+
 }
+
 
 function updateTextColor(event) {
     const card = document.querySelector(".card");
@@ -53,16 +57,27 @@ function updateTextColor(event) {
 
 function updateScreenColor(event) {
   const card = document.querySelector(".cont");
- 
+  const elementsWithIdOut = document.querySelectorAll("#out");
+
   cont.style.backgroundColor = event.target.value; 
-  console.log("hi");
+ 
+  if (event.target.value === "#000000") {
+      elementsWithIdOut.forEach(element => {
+        console.log("hi");
+          element.style.color = "#ffffff"; 
+      });
+  } else {
+      elementsWithIdOut.forEach(element => {
+          element.style.color = "#000000"; 
+      });
+  }
  updateFooterColor(event.target.value);
 }
 
 function updateFooterColor(color) {
-  console.log("hi");
+
   const footer = document.querySelector(".footer");
-  console.log(footer)
+ 
   footer.style.backgroundColor = color; 
 }
 
@@ -90,8 +105,11 @@ function toggleVisibility() {
 toggleElements.addEventListener('click', toggleVisibility);
 
 document.body.addEventListener('click', function(event) {
-    if (event.target.closest('.card')) {
-        toggleVisibility();
-    }
+  const clickedElement = event.target;
+  
+  if (clickedElement.tagName.toLowerCase() === 'input' || clickedElement.closest('.card')) {
+      toggleVisibility();
+  }
 });
+
 
