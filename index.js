@@ -22,7 +22,7 @@ function toggleBorder() {
 let colorPicker1;
 let colorPicker2;
 let colorPicker3;
-const defaultColor = "#ffffff"; // Default color for both pickers
+const defaultColor = "#ffffff"; 
 
 window.addEventListener("load", function() {
     // Initialize first color picker
@@ -31,7 +31,6 @@ window.addEventListener("load", function() {
     colorPicker1.addEventListener("input", updateBackgroundColor, false);
     colorPicker1.select();
 
-    // Initialize second color picker
     colorPicker2 = document.querySelector("#color-picker2");
     colorPicker2.value = defaultColor;
     colorPicker2.addEventListener("input", updateTextColor, false);
@@ -65,9 +64,12 @@ function updateFooterColor(color) {
   console.log("hi");
   const footer = document.querySelector(".footer");
   console.log(footer)
-  footer.style.backgroundColor = color; // Update footer color
+  footer.style.backgroundColor = color; 
 }
 
+
+const toggleElements = document.getElementById('toggleElements');
+const elementsToToggle = ['.title', '.cardColor', '.slider-container', '.footer'];
 
 const toggleElements = document.getElementById('toggleElements');
 const elementsToToggle = ['.title', '.cardColor', '.slider-container', '.footer'];
@@ -76,16 +78,20 @@ toggleElements.addEventListener('change', function() {
     elementsToToggle.forEach(selector => {
         const elements = document.querySelectorAll(selector);
         elements.forEach(element => {
-          if (element.style.display === "none") {
-            element.style.display = "block";
+          if (selector === '.footer') {
+            element.textContent = ''; 
           } else {
-            element.style.display = "none";
+            if (element.style.display === "none") {
+              element.style.display = "block";
+            } else {
+              element.style.display = "none";
+            }
           }
         });
     });
 });
 
+
 window.addEventListener('load', function() {
-  // Reset the state of the switch
   toggleElements.checked = false;
 });
