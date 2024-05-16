@@ -25,7 +25,6 @@ let colorPicker3;
 const defaultColor = "#ffffff"; 
 
 window.addEventListener("load", function() {
-    // Initialize first color picker
     colorPicker1 = document.querySelector("#color-picker");
     colorPicker1.value = defaultColor;
     colorPicker1.addEventListener("input", updateBackgroundColor, false);
@@ -67,9 +66,6 @@ function updateFooterColor(color) {
   footer.style.backgroundColor = color; 
 }
 
-
-const toggleElements = document.getElementById('toggleElements');
-const elementsToToggle = ['.title', '.cardColor', '.slider-container', '.footer'];
 
 const toggleElements = document.getElementById('toggleElements');
 const elementsToToggle = ['.title', '.cardColor', '.slider-container', '.footer'];
