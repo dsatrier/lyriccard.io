@@ -22,7 +22,7 @@ function toggleBorder() {
 let colorPicker1;
 let colorPicker2;
 let colorPicker3;
-const defaultColor = "#0000ff"; // Default color for both pickers
+const defaultColor = "#ffffff"; // Default color for both pickers
 
 window.addEventListener("load", function() {
     // Initialize first color picker
@@ -55,11 +55,22 @@ function updateTextColor(event) {
 
 function updateScreenColor(event) {
   const card = document.querySelector(".cont");
-  cont.style.backgroundColor = event.target.value;
+ 
+  cont.style.backgroundColor = event.target.value; 
+  console.log("hi");
+ updateFooterColor(event.target.value);
 }
 
+function updateFooterColor(color) {
+  console.log("hi");
+  const footer = document.querySelector(".footer");
+  console.log(footer)
+  footer.style.backgroundColor = color; // Update footer color
+}
+
+
 const toggleElements = document.getElementById('toggleElements');
-const elementsToToggle = ['.title', '.cardColor', '.slider-container'];
+const elementsToToggle = ['.title', '.cardColor', '.slider-container', '.footer'];
 
 toggleElements.addEventListener('change', function() {
     elementsToToggle.forEach(selector => {
