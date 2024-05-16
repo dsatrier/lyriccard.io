@@ -22,7 +22,7 @@ html,body{margin:0;padding:0;}
     flex-direction: column;
 
     overflow-y:hidden;
-    height: 100vh;
+    height: 95vh;
     
 }
 
@@ -240,6 +240,23 @@ html,body{margin:0;padding:0;}
       
 }
 
+[contenteditable] {
+    outline: 0px solid transparent;
+  }
+
+  footer {
+    text-align: center;
+    padding: 3px;
+    background-color: white;
+    color: pink;
+    box-sizing:border-box;
+    height: 5vh;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+  }
+
 @media screen and (max-width: 670px) {
     .cardColor {
         flex-direction: column;
@@ -259,7 +276,7 @@ html,body{margin:0;padding:0;}
 
       .slider-text {
         display: inline-block;
-        margin-left: 10px;
+        margin-left: 10px;  
         vertical-align: middle;
         font-family: "Poppins", sans-serif;
         font-weight: 500;
