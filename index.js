@@ -75,30 +75,23 @@ function toggleVisibility() {
         const elements = document.querySelectorAll(selector);
         elements.forEach(element => {
           if (selector === '.footer') {
-            if(element.textContent !== ''){
-            element.textContent = ''; 
-            }else{
-              element.textContent = "instant crush'24 | side project 1";
-            }
+            element.textContent = element.textContent ? '' : "instant crush'24 | side project 1";
           } else {
-            if (element.style.display === "none" && selector === '.cardColor') {
-              element.style.display = "flex";
-            } else if(element.style.display === "none"){
-              element.style.display = "block";
-            }else{
-              element.style.display = "none"
+            if (element.style.display === "none") {
+              element.style.display = (selector === '.cardColor') ? "flex" : "block";
+            } else {
+              element.style.display = "none";
             }
           }
         });
     });
 }
 
-toggleElements.addEventListener('change', toggleVisibility);
-
 toggleElements.addEventListener('click', toggleVisibility);
 
-
-
-window.addEventListener('load', function() {
-  toggleElements.checked = false;
+document.body.addEventListener('click', function(event) {
+    if (event.target.closest('.card')) {
+        toggleVisibility();
+    }
 });
+
