@@ -66,10 +66,15 @@ function updateScreenColor(event) {
         console.log("hi");
           element.style.color = "#ffffff"; 
       });
+      const foot = document.querySelector(".footer");
+      foot.style.color = "#ffffff"; 
+
   } else {
       elementsWithIdOut.forEach(element => {
           element.style.color = "#000000"; 
       });
+      const foot = document.querySelector(".footer");
+      foot.style.color = "#000000"; 
   }
  updateFooterColor(event.target.value);
 }
