@@ -1,3 +1,5 @@
+
+
 .poppins-extrabold-italic {
     font-family: "Poppins", sans-serif;
     font-weight: 800;
@@ -11,6 +13,7 @@
 }
 
 html,body{margin:0;padding:0;}
+
 
 .container{
     display: flex;
@@ -32,18 +35,18 @@ html,body{margin:0;padding:0;}
     width: 350px;
 
 }
-.card{
+.card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: pink;
     border-radius: 15px;
-   padding: 25px;
-   height: auto;
-    width: 500px;
-    transition: border-radius 0.3s; 
-
+    padding: 25px;
+    height: auto;
+    width: 80%;
+    max-width: 500px;
+    transition: border-radius 0.3s;
 }
 
 .card.rounded {
@@ -54,8 +57,13 @@ html,body{margin:0;padding:0;}
     border-radius: 0;
 }
 
-.cardColor{
-    margin-top:20px;
+.topHalf{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.cardColor {
+    margin-top: 20px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -65,37 +73,41 @@ html,body{margin:0;padding:0;}
     font-size: 20px;
 }
 
-.topHalf {
-    display: flex;
-    
-}
+
 
 .lyricCont {
-  
+    display: flex;
+    flex-direction: column;
     padding: 10px;
-    margin-left: 10px; /* Added margin to separate imageCont and lyricCont */
+    margin-left: 10px;
     border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
 }
 
-.lyricTitle{
+.lyricTitle {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 25px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
 }
 
-.lyricSinger{
+.lyricSinger {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
 }
 
 .imageCont {
     width: 80px;
-    margin: auto;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 #imagePlaceholder {
@@ -103,21 +115,13 @@ html,body{margin:0;padding:0;}
     height: 80px;
     border-radius: 10px;
     cursor: pointer;
-    
-    
 }
-
-[contenteditable] {
-    outline: 0px solid transparent;
-  }
-
 
 .logo {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start; /* Align items to the start (left) */
-    width: 500px;
-    margin-left:25px;
+    justify-content: flex-start;
+    width: 100%;
     margin-bottom: 10px;
 }
 
@@ -126,34 +130,32 @@ html,body{margin:0;padding:0;}
     border-radius: 10px;
 }
 
-
-
-
 .lyrics {
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.bottomHalf{
-    margin-left: 20px;
-}
-.lyrics{
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 30px;
     margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 5px;
     margin-bottom: 10px;
-    height: auto;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
 }
+
+.bottomHalf {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 10px;
+}
+
 
 .slider-container{
     display: flex;
     flex-direction: row;
     align-items: center;
+    
 }
 
 .switch {
@@ -211,5 +213,62 @@ html,body{margin:0;padding:0;}
     font-weight: 500;
     font-style: normal;
   }
+
+  @media screen and (max-width: 768px) {
+    .cardColor {
+        flex-direction: column;
+        height: 200px;
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 34px;
+        margin-left: 20px;
+      }
+
+      .slider-text {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+    
+      
+}
+
+@media screen and (max-width: 670px) {
+    .cardColor {
+        flex-direction: column;
+        height: 200px;
+        width: 90%;
+        margin-left: 30px;
+        
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 80px;
+        height: 34px;
+        margin-left: 20px;
+      }
+
+      .slider-text {
+        display: inline-block;
+        margin-left: 10px;
+        vertical-align: middle;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+    
+      
+}
+
+
   
  
